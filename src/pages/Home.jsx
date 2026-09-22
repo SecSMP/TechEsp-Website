@@ -72,7 +72,6 @@ useEffect(() => {
             <div className="hero-badge">
               <span className="status-dot"></span>
               IT Infrastructure & Digital Solutions
-              Samir Patni
             </div>
             
             <a href="/contact" className="health-checkup-cta">
