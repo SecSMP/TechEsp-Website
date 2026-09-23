@@ -4930,3 +4930,62 @@ a {
     padding: 20px 4px 8px;
   }
 }
+/* =========================================================
+   INDUSTRIES — SMOOTH SCROLL / LIGHTWEIGHT MOTION
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.industries-page {
+  overflow: hidden;
+}
+
+.industry-card {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.industry-image,
+.industry-image img {
+  will-change: transform;
+}
+
+.industry-image img {
+  transition:
+    transform 0.45s ease,
+    filter 0.35s ease;
+}
+
+.industry-card:hover .industry-image img {
+  transform: scale(1.05);
+}
+
+/* Softer reveal */
+.industry-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.industry-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .industry-card,
+  .industry-image img {
+    transition: none;
+  }
+}
