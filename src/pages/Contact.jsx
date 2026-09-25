@@ -31,7 +31,7 @@ function Contact() {
     setStatus("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,8 +93,8 @@ function Contact() {
           <div className="contact-details">
             <div className="contact-detail">
               <span className="contact-detail-label">Email</span>
-              <a href="mailto:secsmp007@gmail.com">
-                secsmp007@gmail.com
+              <a href="mailto:support.techesp@gmail.com">
+                Support.TechEsp@gmail.com
               </a>
             </div>
 
